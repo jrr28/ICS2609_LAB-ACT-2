@@ -1,0 +1,89 @@
+{
+  "info": {
+    "name": "Courses API",
+    "_postman_id": "c6e1d01a-1234-5678-9012-courses-api",
+    "description": "CRUD API for managing courses",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Course",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"code\": \"CS101\",\n    \"title\": \"Intro to Computer Science\",\n    \"units\": 3\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/courses",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "courses"]
+        }
+      }
+    },
+    {
+      "name": "Get All Courses",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/courses",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "courses"]
+        }
+      }
+    },
+    {
+      "name": "Get Course by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/courses/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "courses", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update Course",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"code\": \"CS101\",\n    \"title\": \"Intro to CS - Updated\",\n    \"units\": 4\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/courses/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "courses", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Course",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:3000/api/courses/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "courses", "1"]
+        }
+      }
+    }
+  ]
+}
